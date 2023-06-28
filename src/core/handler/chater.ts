@@ -9,7 +9,7 @@ const openaiEmail = Deno.env.get("OPENAI_EMAIL") as string;
 const openaiPassword = Deno.env.get("OPENAI_PASSWORD") as string;
 
 const defaultModel = "gpt-3.5-turbo";
-const defaultPrivateKey = getAccessToken(openaiEmail, openaiPassword);
+const defaultPrivateKey = await getAccessToken(openaiEmail, openaiPassword);
 
 export const chater = (ctx: Context) => {
   const chat = new ChatCompletion(defaultPrivateKey);

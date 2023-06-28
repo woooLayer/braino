@@ -1,7 +1,7 @@
-import { serve } from "./deps.js";
-import { webhookCallback } from "./deps.js";
+import { serve } from "./deps.ts";
+import { webhookCallback } from "./deps.ts";
 
-import { braino } from "./bot.js";
+import { braino } from "./bot.ts";
 
 const handleUpdate = webhookCallback(braino, "std/http");
 
