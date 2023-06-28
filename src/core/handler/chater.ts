@@ -1,7 +1,7 @@
-import { Context } from "../../../deps.ts";
+import { Context } from "grammy";
 
-import { ChatCompletion } from "../../component/openai/chat.ts";
-import { getAccessToken } from "../../component/openai/token.ts";
+import { ChatCompletion } from "@components/openai/chat.ts";
+import { getAccessToken } from "@components/openai/token.ts";
 
 import { SendTypingActionLoopTask } from "./common.ts";
 

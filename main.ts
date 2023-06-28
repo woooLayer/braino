@@ -1,5 +1,5 @@
-import { serve } from "./deps.ts";
-import { webhookCallback } from "./deps.ts";
+import { serve } from "server";
+import { webhookCallback } from "grammy";
 
 import { braino } from "./bot.ts";
 

@@ -1,6 +1,6 @@
-import { Context } from "../../../deps.ts";
+import { Context } from "grammy";
 
-import { LoopTask } from "../../component/utils/loop.ts";
+import { LoopTask } from "@utils/loop.ts";
 
 export class SendTypingActionLoopTask extends LoopTask {
   constructor(ctx: Context) {

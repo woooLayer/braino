@@ -1,0 +1,12 @@
+{
+  "imports": {
+    "@components/": "./src/components/",
+    "@handler/": "./src/core/handler/",
+    "@utils/": "./src/utils/",
+    "@core/": "./src/core/",
+
+    "server": "https://deno.land/std@0.192.0/http/server.ts",
+    "grammy": "https://deno.land/x/grammy@v1.17.1/mod.ts",
+    "openai": "https://deno.land/x/openai@1.4.1/mod.ts"
+  }
+}

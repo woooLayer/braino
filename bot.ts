@@ -1,11 +1,11 @@
-import { Bot } from "./deps.ts";
+import { Bot } from "grammy";
 
-import { chater } from "./src/core/handler/chater.ts";
-import { userInfo } from "./src/core/handler/user.ts";
+import { chater } from "@handler/chater.ts";
+import { userInfo } from "@handler/user.ts";
 
 export const braino = new Bot(Deno.env.get("BOT_TOKEN") as string);
 
-braino.command("start", (ctx) => ctx.reply("Welcome! Up and running."));
+braino.command("start", (ctx) => ctx.reply("Hello!"));
 
 braino.command("userinfo", (ctx) => userInfo(ctx));
 

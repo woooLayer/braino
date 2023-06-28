@@ -1,5 +1,5 @@
-import { OpenAI } from "../../../deps.ts";
-import type { ChatCompletionOptions } from "../../../deps.ts";
+import { OpenAI } from "openai";
+import type { ChatCompletionOptions } from "openai";
 
 export class ChatCompletion extends OpenAI {
   public options: ChatCompletionOptions;
