@@ -3,7 +3,7 @@ import { Bot } from "./deps.ts";
 import { chater } from "./src/core/handler/chater.ts";
 import { userInfo } from "./src/core/handler/user.ts";
 
-export const braino = new Bot(Deno.env.get("BOT_TOKEN") || "");
+export const braino = new Bot(Deno.env.get("BOT_TOKEN") as string);
 
 braino.command("start", (ctx) => ctx.reply("Welcome! Up and running."));
 

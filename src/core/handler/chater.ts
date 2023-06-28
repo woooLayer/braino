@@ -1,11 +1,15 @@
 import { Context } from "../../../deps.ts";
 
 import { ChatCompletion } from "../../component/openai/chat.ts";
+import { getAccessToken } from "../../component/openai/token.ts";
 
 import { SendTypingActionLoopTask } from "./common.ts";
 
+const openaiEmail = Deno.env.get("OPENAI_EMAIL") as string;
+const openaiPassword = Deno.env.get("OPENAI_PASSWORD") as string;
+
 const defaultModel = "gpt-3.5-turbo";
-const defaultPrivateKey = "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";
+const defaultPrivateKey = getAccessToken(openaiEmail, openaiPassword);
 
 export const chater = (ctx: Context) => {
   const chat = new ChatCompletion(defaultPrivateKey);

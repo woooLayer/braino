@@ -1,7 +1,20 @@
-// run the bot locally
+import { serve } from "./deps.js";
+import { webhookCallback } from "./deps.js";
 
-import { braino } from "./bot.ts";
+import { braino } from "./bot.js";
 
-await braino.api.deleteWebhook();
+const handleUpdate = webhookCallback(braino, "std/http");
 
-braino.start();
+serve(async (req) => {
+  if (req.method === "POST") {
+    const url = new URL(req.url);
+    if (url.pathname.slice(1) === braino.token) {
+      try {
+        return await handleUpdate(req);
+      } catch (err) {
+        console.error(err);
+      }
+    }
+  }
+  return new Response();
+});
