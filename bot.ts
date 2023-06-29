@@ -9,4 +9,6 @@ braino.command("start", (ctx) => ctx.reply("Hello!"));
 
 braino.command("userinfo", (ctx) => userInfo(ctx));
 
+braino.command("openai", (ctx) => ctx.reply("openai"));
+
 braino.on("message:text", (ctx) => chater(ctx));

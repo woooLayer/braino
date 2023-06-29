@@ -1,4 +1,4 @@
-import { Context } from "grammy";
+import type { Context } from "grammy";
 
 import { getUserById, listUser, setUser } from "@core/db/db.ts";
 import type { User } from "@core/db/types.ts";

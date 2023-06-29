@@ -1,4 +1,4 @@
-import { Context } from "grammy";
+import type { Context } from "grammy";
 
 import { ChatCompletion } from "@components/openai/chat.ts";
 import { getAccessToken } from "@components/openai/token.ts";
